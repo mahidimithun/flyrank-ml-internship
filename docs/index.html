@@ -13141,7 +13141,6 @@ div#notebook {
 <h3 id="Tables">Tables<a class="anchor-link" href="#Tables">¶</a></h3><ul>
 <li><code>fact_content_daily_performance</code>: GSC impressions/clicks/position and GA4 pageviews/session/engagement signals.</li>
 <li><code>dim_content</code>: content type and content dates used for freshness and population filtering.</li>
-<!-- <li><code>dim_clients</code>: access/history context only; client identifiers are used for grouping, never as model features.</li> -->
 </ul>
 <h3 id="Exclusions">Exclusions<a class="anchor-link" href="#Exclusions">¶</a></h3><ul>
 <li><code>fact_content_query_90d</code> is excluded because its fixed 90-day window can overlap the sealed label period.</li>
@@ -13459,31 +13458,31 @@ Snapshot: 2026-03-31 | feature month: 2026-03 | comparison month: 2026-02
 <tbody>
 <tr>
 <td style="text-align:right">10</td>
-<td style="text-align:right">0.40*</td>
+<td style="text-align:right">0.40</td>
 <td style="text-align:right">0.80</td>
 <td style="text-align:right"><strong>1.00</strong></td>
 </tr>
 <tr>
 <td style="text-align:right">20</td>
-<td style="text-align:right">0.35*</td>
+<td style="text-align:right">0.35</td>
 <td style="text-align:right">0.80</td>
 <td style="text-align:right"><strong>1.00</strong></td>
 </tr>
 <tr>
 <td style="text-align:right">50</td>
-<td style="text-align:right">0.22*</td>
+<td style="text-align:right">0.22</td>
 <td style="text-align:right">0.62</td>
 <td style="text-align:right"><strong>0.96</strong></td>
 </tr>
 <tr>
 <td style="text-align:right">100</td>
-<td style="text-align:right">0.14*</td>
+<td style="text-align:right">0.14</td>
 <td style="text-align:right">0.69</td>
 <td style="text-align:right"><strong>0.95</strong></td>
 </tr>
 </tbody>
 </table></div>
-<p>*The baseline has only one non-zero-scored page in the validated 134,086-page population, so precision beyond the first tied item is not a meaningful ranking measure.</p>
+<p>Note: the baseline has only one non-zero-scored page in the validated 134,086-page population, so precision beyond the first tied item is not a meaningful ranking measure.</p>
 <p>The headline is deliberately narrow: on this held-out, client-grouped split, the Random Forest ranked observed-decline pages better than the transparent rule. It does <strong>not</strong> prove that a flagged page will recover if refreshed, and it does not predict Google's algorithm.</p>
 </div>
 </div>
